@@ -18,7 +18,7 @@ const InputBox = ({ placeholder }: InputBoxType) => {
         Change Name
       </button>
 
-      {/* as we cannot send string while changing the name so we need to convert it to Number */}
+      {/* as we cannot send string while changing the age so we need to convert it to Number */}
       <button
         onClick={() => dispatch({ type: "CHANGE_AGE", payload: Number(text) })}
       >
