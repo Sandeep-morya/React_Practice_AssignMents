@@ -1,0 +1,39 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Learn React-JS",
+      "status": false
+    },
+    {
+      "title": "Learn Python",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Learn JavaScript",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "Learn C++",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "Learn TypeScript",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "Learn JAVA",
+      "status": false,
+      "id": 8
+    },
+    {
+      "title": "Learn MongoDB",
+      "status": false,
+      "id": 10
+    }
+  ]
+}
