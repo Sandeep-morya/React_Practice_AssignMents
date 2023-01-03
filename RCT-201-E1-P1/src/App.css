@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.app {
+  width: 60%;
+  margin: auto;
+  border: 0.1rem solid grey;
+  padding: 1rem;
+}
+.addCountry,
+.addCity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+input,
+select,
+button,
+option {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+}
+button {
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 0.12rem solid rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 0.8rem;
+}
+td {
+  font-weight: 500;
+  color: gray;
+}
+tfoot tr {
+  text-align: center;
+  border: none;
+}
