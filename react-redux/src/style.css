@@ -1,0 +1,44 @@
+html {
+  background: #555;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  text-transform: capitalize;
+}
+.app {
+  text-align: center;
+  font-size: 1.3rem;
+  color: white;
+  width: 70%;
+  margin: auto;
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+input,
+button {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  margin: 0.5rem;
+}
+button:hover {
+  background-color: indianred;
+  color: white;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.item {
+  border: 1px solid white;
+  padding: 1rem;
+}
