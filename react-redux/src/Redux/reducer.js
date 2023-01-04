@@ -19,32 +19,29 @@
 
 // export default reducer;
 
-import { ADD, DELETE, EDIT, TOGGLE } from "./actionTypes";
+import { ADD, DELETE, UPDATE } from "./actionTypes";
 const reducer = (store, { type, payload }) => {
   switch (type) {
     // <----- Insert new Todo in List ----->
 
     case ADD:
       return {
+        ...store,
         todoList: [...store.todoList, payload],
       };
     // <----- Delete the selected Todo Item ----->
     case DELETE:
       return {
+        ...store,
         todoList: store.todoList.filter((e) => e.id != payload),
       };
-    // <----- Used to Toggle The Status ----->
-    case TOGGLE:
+    
+    // <----- Used To update Changes in Todo ----->
+    case UPDATE:
       return {
+        ...store,
         todoList: store.todoList.map((e) =>
-          e.id === payload ? { ...e, status: !e.status } : e
-        ),
-      };
-    // <----- Edit The Todo Title ----->
-    case EDIT:
-      return {
-        todoList: store.todoList.map((e) =>
-          e.id === payload.id ? { ...e, title: payload.title } : e
+          e.id === payload.id ? { ...e, ...payload.changes } : e
         ),
       };
     default:

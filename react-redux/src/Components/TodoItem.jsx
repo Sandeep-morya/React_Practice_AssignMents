@@ -1,6 +1,6 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { deleteTodo, editTodo, toggleTodo } from "../Redux/action";
+import { useDispatch} from "react-redux";
+import { deleteTodo, updateTodo } from "../Redux/action";
 
 const TodoItem = ({ todoData }) => {
   const { id, title, status } = todoData;
@@ -14,13 +14,19 @@ const TodoItem = ({ todoData }) => {
       <button
         onClick={() =>
           dispatch(
-            editTodo({ id, title: prompt("Enter New Title")})
+            updateTodo({ id, changes: { title: prompt("Enter New Title") } })
           )
         }
       >
         Edit
       </button>
-      <button onClick={() => dispatch(toggleTodo(id))}>Toggle</button>
+      <button
+        onClick={() =>
+          dispatch(updateTodo({ id, changes: { status: !status } }))
+        }
+      >
+        Toggle
+      </button>
       <button onClick={() => dispatch(deleteTodo(id))}>Delete</button>
     </div>
   );
