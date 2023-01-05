@@ -17,11 +17,11 @@ const Navbar = () => {
     { path: "/create", name: "Create" },
   ];
 
-  // :: This function exexutes when user clicks on any NavLink ::
+  // :: This function executes when user clicks on any NavLink ::
   const handleClick = (index, path) => {
+    sendToCloud("index", index);
     setActive(index);
     navigate(path);
-    sendToCloud("index", index);
   };
 
   return (
