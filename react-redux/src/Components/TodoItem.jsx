@@ -14,7 +14,7 @@ const TodoItem = ({ todoData }) => {
       <button
         onClick={() =>
           dispatch(
-            updateTodo({ id, changes: { title: prompt("Enter New Title") } })
+            updateTodo(id,{ title: prompt("Enter New Title") } )
           )
         }
       >
@@ -22,7 +22,7 @@ const TodoItem = ({ todoData }) => {
       </button>
       <button
         onClick={() =>
-          dispatch(updateTodo({ id, changes: { status: !status } }))
+          dispatch(updateTodo(id, { status: !status }))
         }
       >
         Toggle

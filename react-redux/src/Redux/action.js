@@ -7,4 +7,4 @@ import { ADD, DELETE, UPDATE } from "./actionTypes";
 
 export const addTodo = (payload) => ({ type: ADD, payload });
 export const deleteTodo = (payload) => ({ type: DELETE, payload });
-export const updateTodo = (payload) => ({type:UPDATE,payload})
+export const updateTodo = (id,changes) => ({type:UPDATE,payload:{id,changes}})

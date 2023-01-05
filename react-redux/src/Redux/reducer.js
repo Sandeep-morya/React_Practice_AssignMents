@@ -38,6 +38,8 @@ const reducer = (store, { type, payload }) => {
     
     // <----- Used To update Changes in Todo ----->
     case UPDATE:
+
+      console.log(payload)
       return {
         ...store,
         todoList: store.todoList.map((e) =>
