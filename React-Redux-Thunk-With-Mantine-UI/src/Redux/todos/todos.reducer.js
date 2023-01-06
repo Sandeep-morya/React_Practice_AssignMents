@@ -7,7 +7,8 @@ const initial = {
   loading: false,
   error: false,
   todoList: [],
-};
+  totalpages: 1,
+}
 const todoReducer = (state = initial, action) => {
   switch (action.type) {
     case GET_TODOS_LOADING:
@@ -27,7 +28,8 @@ const todoReducer = (state = initial, action) => {
       return {
         loading: false,
         error: false,
-        todoList: action.payload,
+        todoList: action.payload.data,
+        totalpages: action.payload.headers["x-total-count"],
       };
 
     default:
